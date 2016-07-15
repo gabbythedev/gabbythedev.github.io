@@ -1,0 +1,38 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+h1, .jumbotron h1 {
+    font-family: 'Bevan', cursive;
+    letter-spacing: -0.025em;
+    text-shadow: -0.075em 0 0 rgba(15, 15, 15, 0.1);
+    font-size: 7.5em;
+    color: #A04B43;
+}
+
+.jumbotron {
+	background:#E1E8F0;
+}
+
+/*TEMP For lookig over project*/
+#colorpallette {
+	width: 100%;
+}
+
+#colorpallette ul {
+	padding: 0;
+	margin: 0;
+	float: left;
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+#colorpallette li {
+    list-style: none;
+    width: 96%;
+    float: left;
+    padding: 0 2%;
+}
+
