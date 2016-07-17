@@ -1,6 +1,6 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-	padding-top: 50px;
+	padding-top: 52px;
 	padding-bottom: 20px;
 }
 
@@ -9,12 +9,41 @@ h1, .jumbotron h1 {
     letter-spacing: -0.025em;
     text-shadow: -0.075em 0 0 rgba(15, 15, 15, 0.1);
     font-size: 7.5em;
-    color: #A04B43;
+    color: #FF9B2C;
+}
+
+nav {
+	height: 52px;
+    box-shadow: 0 9px 10px #333;
+    border-color: #333;
+}
+
+.navbar-inverse {
+    /*background-color: #E1E8F0;*/
+    background-color:#16174f; /*DELETE ME*/
+    border-color: #9d9d9d;
+    /*border-color: #E1E8F0;*/
+}
+
+.well.fun-button {
+    padding: 5px;
+    width: 110px;
+    background-color:#16174f; /*DELETE ME*/
+    margin-bottom: 0;
+}
+
+a.navbar-brand {
+	height: 100%;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 28px;
+    padding: 0 15px;
 }
 
 .jumbotron {
-	background:#E1E8F0;
+	background: url("../images/profile_background4.png") #E1E8F0 right top;
 }
+
 
 /*TEMP For lookig over project*/
 #colorpallette {
