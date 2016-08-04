@@ -12,15 +12,20 @@ h1, .jumbotron h1 {
     color: #FF9B2C;
 }
 
+body.fun .jumbotron h1 {
+    color: white; 
+    /*#FF9B2C;*/
+}
+
 nav {
 	height: 52px;
-    box-shadow: 0 9px 10px #333;
+    box-shadow: 0 8px 20px #999;
     border-color: #333;
 }
 
 .navbar-inverse {
     /*background-color: #E1E8F0;*/
-    background-color:#16174f; /*DELETE ME*/
+    background-color:#0080B2; 
     border-color: #9d9d9d;
     /*border-color: #E1E8F0;*/
 }
@@ -28,8 +33,12 @@ nav {
 .well.fun-button {
     padding: 5px;
     width: 110px;
-    background-color:#16174f; /*DELETE ME*/
+    /*background-color:#16174f; /*DELETE ME*/*/
     margin-bottom: 0;
+}
+
+.btn-primary {
+	background: #2CC3FF;
 }
 
 a.navbar-brand {
@@ -41,7 +50,7 @@ a.navbar-brand {
 }
 
 .jumbotron {
-	background: url("../images/profile_background4.png") #E1E8F0 right top;
+	background: url("../images/profile_background3.png") #E1E8F0 right top;
 }
 
 
