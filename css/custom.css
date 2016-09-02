@@ -9,7 +9,8 @@ h1, .jumbotron h1 {
     letter-spacing: -0.025em;
     text-shadow: -0.075em 0 0 rgba(15, 15, 15, 0.1);
     font-size: 7.5em;
-    color: #FF9B2C;
+    /*color: #FF9B2C;*/
+    color: #17167F;
 }
 
 body.fun .jumbotron h1 {
@@ -25,7 +26,7 @@ nav {
 
 .navbar-inverse {
     /*background-color: #E1E8F0;*/
-    background-color:#0080B2; 
+    background-color:#240D7F; 
     border-color: #9d9d9d;
     /*border-color: #E1E8F0;*/
 }
@@ -50,7 +51,16 @@ a.navbar-brand {
 }
 
 .jumbotron {
-	background: url("../images/profile_background3.png") #E1E8F0 right top;
+	background: url("../images/profile_background3.png") #E1E8F0 right top fixed;
+	min-height: 375px;
+}
+
+#education p {
+	font-size: 14px;
+}
+
+.job {
+	float: left;
 }
 
 

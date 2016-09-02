@@ -38,32 +38,97 @@
       <div class="container">
         <h1>Hello, world!</h1>
         <p>My name is <b>Gabby Bales</b>, and I'm a developer looking to build great user experiences.</p>
-        <p>
-        	<a class="btn btn-primary btn-lg" href="#" role="button">Education&raquo;</a>
-        	<a class="btn btn-primary btn-lg" href="#" role="button">Experience&raquo;</a>
-        </p>
-      </div>
+        <!-- Example row of columns -->
+        <div class="row">
+	        <div class="col-md-4">
+	          <h2>My School</h2>
+	          <p>Ramblin' Reck from Georgia Tech and a helluva engineer</p>
+	          <p><a class="btn btn-default" href="#" role="button">See More &raquo;</a></p>
+	        </div>
+	        <div class="col-md-4">
+	          <h2>My Experiences</h2>
+	          <p>Who else do you know that works in big oil and marketing agencies?</p>
+	          <p><a class="btn btn-default" href="#" role="button">See More &raquo;</a></p>
+	       </div>
+	        <div class="col-md-8">
+	          <h2>My Work</h2>
+	          <p>Some examples of the work I've done as a front-end developer.</p>
+	          <p><a class="btn btn-default" href="#" role="button">See More &raquo;</a></p>
+	        </div>
+    	</div>
     </div>
-    <!-- <img src="images/profile_background.png"> -->
+    </div>
+
 
     <div class="container" id="education">
+    		<h2>Georgia Tech</h2>
+			<p>Bachelor’s Degree, Computer Science</p>
+			<p>2011 – 2015</p>
+			<p>Specialty in Information Internetworks and Human-computer-interaction</p>
+			<p>Activities and Societies: GT Ambassadors, Lambda Sigma, Alpha Chi Omega, Homecoming Committee, Red Cross Club</p>
     </div>
 
-    <div class="container" id="experience">    	
-    	<div class="job">
-    		<h3>ConocoPhillips</h3>
-    		<h4></h4>
+    <div class="container" id="experience">
+    	<div class="job col-xs-8">
+    		<h3>Integration Developer</h3>
+    		<h4>ConocoPhillips</h4>
+    		<h5>June 2015 - Now</h5>
+    		<ul>
+    			<li>Evangelized use of open-source ETL tool, Talend, through creation of high-profile time-shifting field data collection process to assist in operationalizing Hadoop tools</li>
+    			<li>Designed and implemented team-building and problem-solving web game with Node.js backend for the ConocoPhillips 2016 Innovation Challenge</li>
+    			<li>Led the implementation of task management tool, JIRA, in order to financially quantify and visualize for management both individual contributions and larger team efforts</li>
+    			<li>Develop ETL interfaces handling sensitive data using Informatica and Talend enabling custom applications to work across the enterprise and legal requirements for the company to be met</li>
+    			<li>Manage operations outages both during and outside of normal working hours, and collaborate with business to troubleshoot production errors to prevent large consequences from integration failures
+    			</li>
+    		</ul>
+    	</div>
+    	<div class="job-pic col-xs-4">
+    		<img src='images/cop.jpg'>
+
+    	</div>
+    	<div class="job col-xs-8">
+    		<h3>Development Intern</h3>
+    		<h4>Definition 6</h4>
+    		<h5>May 2012 - May 2015</h5>
+    		<ul>
+    			<li>Acted as responsive front-end developer for creating interactive experiences using HTML5/CSS3/JavaScript on responsive web design projects including Coca-Cola, Pull-A-Part, FATZ, and ICT Chemicals</li>
+    			<li>Designed 85 automation Junit test suite with Selenium-automation tool to improve quality of code patches applied to client website to improve QA process</li>
+    			<li>Coordinated successful deployments of Android and iOS applications with onshore and offshore resources to meet client deadline and budgets while working around intermittent resource availability</li>
+    			<li>Engaged in design of website requirements, brand integration and wireframes with client executives</li>
+    		</ul>
+    	</div>
+    	<div class="job col-xs-8">
+    		<h3>Emerging Technologies Intern</h3>
+    		<h4>ConocoPhillips</h4>
+    		<h5>May 2014 - August 2014</h5>
+    		<ul>
+    			<li>Developed .NET RESTful API to allow web systems to interface with same architecture as custom-made Google Glass application for workflow management</li>
+				<li>Piloted proof-of-concept with small team to create company Google Glass development standards through development of Google Glass application</li>
+				<li>Presented as Google Glass SME to 50 technical professionals with broad range of capabilities at BUG from various Bartlesville companies</li>
+				<li>Collaborated with members of the business and solution architects on team for understanding existing workflow management problem and well-documented requirements for solution</li>
+    		</ul>
+    	</div>
+    	<div class="job col-xs-8">
+    		<h3>Founder, CEO</h3>
+    		<h4>One Day Blood Drive Project, Inc.</h4>
+    		<h5>May 2012 - October 2013</h5>
+    		<ul>
+    			<li>Founded project that partners with nationwide universities and colleges to encourage hosting on-campus    blood drives on September 11th in honor of the heroes who died on 9/11/2001</li>
+				<li>Cooperated with law firm to incorporate nationally and establish 501c3 non-profit status</li>
+				<li>Collaborated with blood bank and university contacts to get participants from 25 schools across 20 states</li>
+				<li>Manage team of 25 individuals in recruiting participants, developing advertising strategies, and fundraising for supplies</li>
+    		</ul>
     	</div>
 
     </div>
-
-
-
+    <div class="container" id="work">
+    
+    </div>
 
 <!-- DELETE ME -->
-<div style="display: none">
+<div style="display: block">
 
-    <div class="container" id="colorpallette">
+<!--     <div class="container" id="colorpallette">
     	<div>
     		<ul class="color-option">
     			<li style="background:#889099;">#889099</li>
@@ -99,28 +164,9 @@
     			<li><a href=""></a></li>
     		</ul>
 	    </div>
-    </div>
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Education</h2>
-          <p>Recent Georgia Tech Grad from Atlanta, focus in HCI and information info-networks/p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Experience</h2>
-          <p>Definition 6 | ConocoPhillips {Atlanta | Bartlesville} (Front End Developer | Integration Analyst)</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Personal Work</h2>
-          <p>???</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-      </div>
-      <hr>
+    </div> -->
+    
+      <br>
 
       <footer>
         <p>&copy; Made by Gabby the Dev</p>
