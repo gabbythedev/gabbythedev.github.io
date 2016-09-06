@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>Testing vertical text</title>
+		<style>
+
+		body{
+		  font-family:'Roboto', sans-serif;
+		  font-size:18px;
+		}
+		h2{
+		  font-size:30px;
+		  font-weight:normal;
+		  background:rgba(255,255,255, 0.5);
+		  padding:20px;
+		  color:#fff;
+		  text-shadow:2px 2px 0 rgba(0,0,0,0.5);
+		  margin-top:0;
+		}
+		h3{
+		  color:#fff;
+		  font-weight:normal;
+		  border-bottom:3px solid rgba(255,255,255,0.3);
+		}
+		.container{
+		  background:#dedede;
+		  width:200px;
+		  padding:10px;
+		  min-height:100px;
+		  line-height:95px;
+		  margin:10px;
+		  float:left;
+		  -mox-box-shadow:0 0 10px rgba(0,0,0,0.5);
+		  -webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);
+		  box-shadow:0 0 10px rgba(0,0,0,0.5);
+		}
+		.container > span{
+		  display:inline-block;
+		  line-height:20px;
+		  vertical-align:middle;
+		  color:#4B4B4B;
+		}
+		.box-wrapper{
+		  overflow:hidden;
+		}
+		pre{
+		  background:rgba(255,255,255, 0.5);
+		  color:rgba(0,0,0,1);
+		  padding:10px;
+		}
+
+/*TEST 2*/
+			.area { 
+			  background: yellow;
+			  width: 300px; 
+			  height: 300px; 
+			  position: relative;
+			}
+
+			.bubble { 
+			  background: green;
+			  position: absolute; 
+			  left: 93px; 
+			  top: 21px; 
+			  width: 135px; 
+			  height: 138px; 
+			  display: table; 
+			}
+
+			.bubble p {
+			  display: table-cell; 
+			  vertical-align: middle; 
+			  text-align: center; 
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="box-wrapper">
+		  <div class="container">
+		    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+		  </div>
+		  <div class="container">
+		    <span>Click me</span>
+		  </div>
+		  <div class="container">
+		    <span> Praesent ac nisi velit. Sed tristique viverra nisl et pretium. Aliquam feugiat gravida metus sit amet varius. Suspendisse molestie felis vel massa aliquam, eget euismod erat aliquet. Praesent eu eleifend purus. Aenean tincidunt lobortis magna et suscipit.</span>
+		  </div>
+		</div>
+		<h3 class="subtitle">Code</h3>
+		<pre class="code-block">
+		  &lt;div&gt;
+		      &lt;span&gt;Vertically aligned text&lt;/span&gt;
+		  &lt;/div&gt;
+		  
+		  div{
+		      min-height:100px;
+		      line-height:110px;
+		  }
+		  div > span{
+		      display:inline-block;
+		      line-height:20px;
+		      vertical-align:middle;
+		  }
+		</pre>
+		<div class="note">
+		  This method works when you have boxes of fixed height. You can use <code>min-height</code> to set a minimum height to the parent box thus allowing the text to expand if there are more lines.
+		</div>
+
+
+	<!-- TEST 2 -->
+		<div class="area">
+		      <div class="bubble">
+		          <p>To look best, text should really be centered inside this bubble both vertically and horizontally.</p>
+		      </div>
+		</div>
+	</body>
+</html>
