@@ -12,6 +12,24 @@ h1, h2, h3, .job-tile span {
 	font-family: 'Bevan', cursive;
 }
 
+@media (min-width: 1200px) {
+
+    body .container {
+        width: 86%;
+        margin: 0 7%;
+        padding: 2% 0;
+    }
+
+    .container > h1 {
+        text-transform: uppercase;
+        font-size: 60px;
+    }
+
+    .container p, .job li {
+        font-size: 24px;
+    }
+}
+
 
 .jumbotron h1, .jumbotron h2  {
     letter-spacing: -0.025em;
@@ -38,17 +56,29 @@ nav {
 }
 
 .navbar-inverse {
-    /*background-color: #E1E8F0;*/
-    background-color:#240D7F; 
+    width: 100%;
+    padding: 0 5%;
+    border-radius:0;
+    background-color:#538CCB    ; 
     border-color: #9d9d9d;
+    color: #538CCB;
+    /*background-color: #E1E8F0;*/
     /*border-color: #E1E8F0;*/
     margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #DFDFDF;
+}
+
+.navbar-inverse a:hover {
+    color: white;
 }
 
 .well.fun-button {
     padding: 5px;
     width: 110px;
-    /*background-color:#16174f; /*DELETE ME*/*/
+    /*background-color:#16174f; /*DELETE ME*/
     margin-bottom: 0;
 }
 
@@ -66,6 +96,7 @@ a.navbar-brand {
 
 .jumbotron {
 	background: url("../images/profile_background_bw2.png") #E1E8F0 right bottom fixed no-repeat;
+	/*background: url("../images/profile_background3.png") #333 right top fixed;*/
 	min-height: 375px;
 	margin-bottom: 0;
 }
@@ -89,10 +120,6 @@ a.navbar-brand {
 .job.active {
 	display: block;
 }
-
-.job li {
-	font-size: 16px;
-} 
 
 .choice-button {
     background: aliceblue;
@@ -137,4 +164,9 @@ h3.choice-button:hover{
 .job-tile > span{
 	display: inline-block;
 	line-height: 20px;
+}
+
+#about-me {
+    height: 100%;
+    background: aliceblue;
 }
