@@ -65,12 +65,19 @@ a.navbar-brand {
 }
 
 .jumbotron {
-	background: url("../images/profile_background3.png") #E1E8F0 right top fixed;
+	background: url("../images/profile_background_bw2.png") #E1E8F0 right bottom fixed no-repeat;
 	min-height: 375px;
+	margin-bottom: 0;
 }
 
 .container > h1 {
 	text-transform: uppercase;
+}
+
+#experience {
+	background: #0E0D4C;
+	color: #E1E8F0;
+	padding: 50px 0;
 }
 
 .job {
@@ -84,7 +91,7 @@ a.navbar-brand {
 }
 
 .job li {
-	
+	font-size: 16px;
 } 
 
 .choice-button {
@@ -100,6 +107,7 @@ a.navbar-brand {
     letter-spacing: .1em;
 
     z-index: 100;
+    display: none;
 }
 
 h3.choice-button:hover{
@@ -112,11 +120,11 @@ h3.choice-button:hover{
 }
 
 .job-tile {
-    background: blue;	
-	min-height: 80px;
+    background: aliceblue;
     width: 80%;
     margin: 3% 10%;
     padding: 5%;
+    color: black;
     vertical-align: middle;
     text-align: center;
     /*display:table-cell	;*/
