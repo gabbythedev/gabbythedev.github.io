@@ -329,7 +329,7 @@ button.navbar-toggle {
 		text-align: center;
 	}
 
-	.col-xs-7{
+	.col-xs-7, .jumbotron p{
 		width: 100%;
 		text-align: center;
 	}
