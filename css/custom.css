@@ -44,15 +44,12 @@ border-radius: 5px;
     }
 }
 
-@media (min-width: 600px) and (max-width: 1200px) {
-
-}
 
 
 .jumbotron h1, .jumbotron h2  {
     letter-spacing: -0.025em;
     text-shadow: -0.075em 0 0 rgba(15, 15, 15, 0.1);
-    font-size: 7.5em;
+    font-size: 7em;
     color: #17167F;
     text-transform: none;
 }
@@ -111,6 +108,7 @@ a.navbar-brand {
 	min-height: 375px;
 	padding-top: 10px;
 	margin-bottom: 0;
+	background-position-y: -125px;
 }
 
 .btn-default {
@@ -277,15 +275,30 @@ input.knob {
 	font-size: 20px;
 }
 
+#about-me a{
+	color: black;
+	text-decoration: underline;	
+}
+
 
 
 /*Responsive Pieces*/
+@media (max-width: 999px) {
+	.jumbotron {
+			background-position-y:100%;
+	}
+
+	#about-me p {
+		font-size:18px;
+	}
+}
 @media (min-width: 500px)  and (max-width: 800px) {
 button.navbar-toggle {
 	display: none;
 }
 	.jumbotron {
 		background: url("../images/mobile_profile_bw.png") #E1E8F0 right bottom fixed no-repeat;
+		background-position-y:100%;
 	}
 
 	.jumbotron h1 {
@@ -302,7 +315,6 @@ button.navbar-toggle {
 		width: 100%;
 		text-align: center;
 	}
-
 
 }
 
