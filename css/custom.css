@@ -110,13 +110,13 @@ a.navbar-brand {
 	background: url("../images/profile_background_bw2.png") #E1E8F0 right bottom fixed no-repeat;
 	min-height: 375px;
 	padding-top: 10px;
-	margin-top: 10px;
 	margin-bottom: 0;
 }
 
 .btn-default {
 	background: #3FCB19;
 	color: #E1E8F0;
+	font-size: 20px;
 }
 
 
@@ -180,7 +180,7 @@ h3.choice-button:hover{
     color: #333;
     vertical-align: middle;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: 5px 5px 15px #999;
 }
 
@@ -205,8 +205,8 @@ h3.choice-button:hover{
 
 .work-list li {
 	list-style: none;
-	width:48%;
-	padding: 1%;
+	/*width:48%;*/
+	/*padding: 1%;*/
 	float: left;
 }
 
@@ -252,6 +252,7 @@ img.work-image {
 #about-me {
     min-height: 100%;
     background: #538CCB;
+    padding-bottom: 30px;
 }
 
 #about-me h3 {
@@ -259,18 +260,95 @@ img.work-image {
 }
 
 .skill {
-	width: 25%; 
+	/*width: 25%; */
 	border: none; 
 	margin-bottom: 20px;
 	float: left;
 }
 
-.skill input.knob {
+input.knob {
 	color: #333 !important;
 }
 
 .skill label {
-	width: 75%;
+	width: 100%;
 	color: #333;
-	text-align: center;
+	text-align: left;
+	font-size: 20px;
+}
+
+
+
+/*Responsive Pieces*/
+@media (min-width: 500px)  and (max-width: 800px) {
+button.navbar-toggle {
+	display: none;
+}
+	.jumbotron {
+		background: url("../images/mobile_profile_bw.png") #E1E8F0 right bottom fixed no-repeat;
+	}
+
+	.jumbotron h1 {
+		font-size: 56px;
+		text-align: center;
+	}
+
+	.skill canvas {
+		width: 60%;
+		margin: 5px 20%;
+	}
+
+	.skill label {
+		width: 100%;
+		text-align: center;
+	}
+
+
+}
+
+@media (max-width: 699px) {
+	.job {
+		display: block;
+	}
+
+	.job-tile {
+		display: none;
+	}
+}
+
+@media (max-width: 499px) {
+	button.navbar-toggle {
+		display: none;
+	}
+	.jumbotron {
+		background: #E1E8F0 right bottom fixed no-repeat;
+	}
+
+	.jumbotron h1 {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.col-xs-7{
+		width: 100%;
+		text-align: center;
+	}
+
+	.job ul {
+		padding-left: 5px;
+	}
+
+	ul#work-list {
+		padding-left: 0;
+	}
+
+	.skill canvas {
+		width: 70%;
+		margin: 5px 10%;
+	}
+
+	.skill label {
+		font-size: 12px;
+		text-align: center;
+	}
 }
