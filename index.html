@@ -9,7 +9,65 @@
 	<!-- python -m SimpleHTTPServer 8082 -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.knob.min.js"></script>
     <link href="css/custom.css" rel="stylesheet">
+    <script>
+    $(function($) {
+
+                $(".knob").knob({
+                    change : function (value) {
+                        //console.log("change : " + value);
+                    },
+                    release : function (value) {
+                        //console.log(this.$.attr('value'));
+                        console.log("release : " + value);
+                    },
+                    cancel : function () {
+                        console.log("cancel : ", this);
+                    },
+                    /*format : function (value) {
+                        return value + '%';
+                    },*/
+                    draw : function () {
+
+                        // "tron" case
+                        if(this.$.data('skin') == 'tron') {
+
+                            this.cursorExt = 0.3;
+
+                            var a = this.arc(this.cv)  // Arc
+                                , pa                   // Previous arc
+                                , r = 1;
+
+                            this.g.lineWidth = this.lineWidth;
+
+                            if (this.o.displayPrevious) {
+                                pa = this.arc(this.v);
+                                this.g.beginPath();
+                                this.g.strokeStyle = this.pColor;
+                                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
+                                this.g.stroke();
+                            }
+
+                            this.g.beginPath();
+                            this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
+                            this.g.stroke();
+
+                            this.g.lineWidth = 2;
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.o.fgColor;
+                            this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                            this.g.stroke();
+
+                            return false;
+                        }
+                    }
+                });
+            });
+    </script>
 </head>
 <body>
 
@@ -129,27 +187,26 @@
 	    	<h1>My Work</h1>
 	    	<ul class="work-list">
 	    		<li>
-	    			<img class="sample" src="images/ict_desktop.png"/>
+	    			<img class="work-image" src="images/ict_desktop.png"/>
 	    			<h3>ICT Chemicals Responsive Redesign</h3>
-	    			<p>Acted as front-end lead for the complete revamp of ICT Chemicals website, utilizing ASP.NET backend and Responsive Front-End. Worked with multiple other developers to finish project within timeline and under budget.<br><a href="http://www.ictchemicals.com">See it live HERE</a></p>
+	    			<p>I acted as front-end lead for the complete revamp of ICT Chemicals website, utilizing ASP.NET backend and Responsive Front-End. Worked with multiple other developers to finish project within timeline and under budget.<br><a href="http://www.ictchemicals.com">View my work here.</a></p>
 	    		</li>
 	    		<li>
-	    			<img class="sample" src="images/fatz_desktop.png"/>
-	    			<h3>FATZ</h3>
-	    			<p>Acted as front-end lead for the complete revamp of ICT Chemicals website, utilizing ASP.NET backend and Responsive Front-End. Worked with multiple other developers to finish project within timeline and under budget</p>
+	    			<img class="work-image" src="images/fatz_desktop.png"/>
+	    			<h3>FATZ This-N-That</h3>
+	    			<p>For FATZ's Early 2015 Special, I created pixel-perfect webpages for FATZs desktop and mobile site in 24 hours to meet a very quick deadline. THe promotion was temporary and is no longer live, but you can see using the Internet Archive WayBack Machine.<br><a href="https://web.archive.org/web/20150213010555/http://www.fatz.com/this-n-that/">View my work here.</a></p>
 	    		</li>
 			</ul>
 	    	<ul class="work-list">
-
 	    		<li>
-	    			<img class="sample" src="images/ict_desktop.png"/>    			
-	    			<h3>ConocoPhillips Innovation Challenge</h3>
-	    			<p>Acted as front-end lead for the complete revamp of ICT Chemicals website, utilizing ASP.NET backend and Responsive Front-End. Worked with multiple other developers to finish project within timeline and under budget</p>
+	    			<img class="work-image" src="images/pullapart_desktop.png"/>
+	    			<h3>Pull-A-Part Responsive</h3>
+	    			<p>For Pull-A-Part, I worked on an agile team as a front-end developer, using with both ASP.NET and front-end pieces to develop additional functionality and convert Pull-A-Part's website to a responsive design.<br><a href="http://www.pullapart.com/locations/atlanta-east/">View my work here.</a></p>
 	    		</li>
 	    		<li>
-	    			<img class="sample" src="images/pullapart_desktop.png"/>
-	    			<h3>Pull-A-Part Responsive</h3>
-	    			<p>For Pull-A-Part, I worked as a front-end developer, working with both ASP.NET and front-end pieces to develop additional functionality and convert Pull-A-Part's website to a responsive design.</p>
+	    			<img class="work-image" src="images/ict_desktop.png"/>    			
+	    			<h3>ConocoPhillips Innovation Challenge</h3>
+	    			<p>For ConocoPhillips' Spring Recruiting Event, I designed and developed a 2-hour team-building game. Our challenge involved designing a game that would allow students to play the game on laptop computers, while also interacting in person. From a technology perspective, I was principally responsible for our backend, using Node.js, Express, Socket.io, and MongoDB.</p>
 	    		</li>
 	    	</ul>
 	    </div>
@@ -158,26 +215,62 @@
     <div  id="about-me">
 		<div class="container">
 			<h1>Skills and Interests</h1>
-			<p>
-				What else is there to know? 
-				<br><br>
-				<i>The silly stuff</i>
-				<br>
-				I have a cat that has probably sits in my lap while I'm working on any projects at home. I enjoy sky-diving, hang-gliding, and other thriling experiences. I am currently in the and anything process of learning to cook, one ambitious meal at a time. 
-				<br><br>
-				<i>The fun stuff</i>
-				<br>
-				I enjoy the pursuit of not just exceeding expectations, but redefining them. I am constantly learning how to be as great at the fantastic mentors I have had, and dedicated to continuous improvement for both myself and my team. 
-			</p>  	
+			<p>So what else do you want to know?</p>
+			 
+			<br><br>
+			<i>What I Love</i>
+			<br>
+			<p>I love working with a team to develop great projects. I love creating digital experiences for interaction.</p>
+<!-- 			<p>I have a cat that has probably sits in my lap while I'm working on any projects at home. I enjoy sky-diving, hang-gliding, and other thriling experiences. I am currently in the and anything process of learning to cook, one ambitious meal at a time.</p>
+ -->
+			<h3>My Skills</h3>
+			<br>	
+			<div id="skill-list">		    
+    			<div class="skill">			      
+			        <label>HTML5</label>
+			        <input class="knob" readonly data-width="100%" value="90" data-fgColor="#3FCB19" data-rotation=anticlockwise data-thickness=".5">
+		    	</div>
+		    	<div class="skill">			      
+			        <label>CSS3</label>
+			        <input class="knob" readonly data-width="100%" value="90" data-fgColor="#3FCB19" data-rotation=anticlockwise data-thickness=".5">
+		    	</div>
+		    	<div class="skill">			      
+			        <label>Javascript</label>
+			        <input class="knob" readonly data-width="100%" value="85" data-fgColor="#3FCB19" data-rotation=anticlockwise data-thickness=".5">
+		    	</div>
+		    	<div class="skill">			      
+			        <label>Java</label>
+			        <input class="knob" readonly data-width="100%" value="75" data-fgColor="#3FCB19" data-rotation=anticlockwise data-thickness=".5">
+		    	</div>
+			</div>
+			<
+			<h3>The Fun Stuff</h3>
+			<br>
+			<p>I enjoy the pursuit of not just exceeding expectations, but redefining them. I am constantly learning how to be as great at the fantastic mentors I have had, and dedicated to continuous improvement for both myself and my team. </p>  	
 		</div>
     </div>
-    
-    <footer>
-    	&copy; Made by Gabby the Dev
-    </footer>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Modal -->
+	<div id="work-modal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">A closer look at my work</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="images/ict_desktop.png"/>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
     <script>
     	var funMode = function() {
     		// TweenLite.to($("#fun"), 1, {scale:0.2, opacity:0.3});
@@ -186,9 +279,8 @@
     	}
 
     </script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/easing/EasePack.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
@@ -205,6 +297,11 @@
 		   currTile = classId;
 		});
 
+
+		// $("img").click(function() {
+		// 	console.log("THIS IS A TEST");
+		// 	$("#work-modal").modal();
+		// });
 	</script>
 </body>
 </html>
